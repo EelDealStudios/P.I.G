@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca2bn6f8m8dc4"
+path="res://.godot/imported/EelDealStudios - main menu theme.mp3-d3783788ce2bac4ae7da9aa4ddd501c7.mp3str"
+
+[deps]
+
+source_file="res://music/EelDealStudios - main menu theme.mp3"
+dest_files=["res://.godot/imported/EelDealStudios - main menu theme.mp3-d3783788ce2bac4ae7da9aa4ddd501c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dtscb2u6r5xti"
+path="res://.godot/imported/Super Beatpop.ttf-96d9375e450e00c70ed27e01e8ff8b03.fontdata"
+
+[deps]
+
+source_file="res://fonts/Super Beatpop.ttf"
+dest_files=["res://.godot/imported/Super Beatpop.ttf-96d9375e450e00c70ed27e01e8ff8b03.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
