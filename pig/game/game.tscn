@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bjdd5lrs4em1e"]
+
+[ext_resource type="Script" uid="uid://byn5kc4jrushg" path="res://game/game.gd" id="1_u5opy"]
+[ext_resource type="Texture2D" uid="uid://cgv83sy7mx2e7" path="res://images/pig1.jpeg" id="3_l8g03"]
+[ext_resource type="Script" uid="uid://3xxujjgcj6xm" path="res://game/pig_2.gd" id="4_j8tme"]
+[ext_resource type="Texture2D" uid="uid://bdbpeg23oukr0" path="res://images/pig2.jpeg" id="5_3vho3"]
+[ext_resource type="Script" uid="uid://danc7t85kq0hx" path="res://game/pig_3.gd" id="6_qf6n1"]
+[ext_resource type="Texture2D" uid="uid://bhu5dgjs6i314" path="res://images/pig3.jpeg" id="7_vsp63"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
+bg_color = Color(0.9999997, 0.91253644, 0.96420556, 1)
+
+[node name="Game" type="Control" unique_id=2115098873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u5opy")
+
+[node name="Panel" type="Panel" parent="." unique_id=321806025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eow3j")
+
+[node name="pig1" type="Node2D" parent="." unique_id=484276072]
+script = ExtResource("6_qf6n1")
+
+[node name="Sprite2D" type="Sprite2D" parent="pig1" unique_id=1787277911]
+position = Vector2(361, 582)
+scale = Vector2(0.2265, 0.2155)
+texture = ExtResource("3_l8g03")
+
+[node name="pig2" type="Node2D" parent="." unique_id=693924844]
+script = ExtResource("4_j8tme")
+
+[node name="Sprite2D" type="Sprite2D" parent="pig2" unique_id=1811281403]
+position = Vector2(968, 590)
+scale = Vector2(0.20600002, 0.1975)
+texture = ExtResource("5_3vho3")
+
+[node name="pig3" type="Node2D" parent="." unique_id=1673463507]
+script = ExtResource("6_qf6n1")
+
+[node name="Sprite2D" type="Sprite2D" parent="pig3" unique_id=1059100613]
+position = Vector2(1535, 599)
+scale = Vector2(0.2265, 0.2155)
+texture = ExtResource("7_vsp63")

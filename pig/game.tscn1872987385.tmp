@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bjdd5lrs4em1e"]
+
+[ext_resource type="Script" uid="uid://byn5kc4jrushg" path="res://game.gd" id="1_eow3j"]
+[ext_resource type="Script" uid="uid://buk7ja35utoy8" path="res://pig_1.gd" id="2_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://cgv83sy7mx2e7" path="res://images/pig1.jpeg" id="3_vef74"]
+[ext_resource type="Script" uid="uid://3xxujjgcj6xm" path="res://pig_2.gd" id="4_hve3p"]
+[ext_resource type="Texture2D" uid="uid://bdbpeg23oukr0" path="res://images/pig2.jpeg" id="5_mfdv2"]
+[ext_resource type="Script" uid="uid://danc7t85kq0hx" path="res://pig_3.gd" id="6_iotsf"]
+[ext_resource type="Texture2D" uid="uid://bhu5dgjs6i314" path="res://images/pig3.jpeg" id="7_lc2xo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwb40"]
+bg_color = Color(0.918212, 0.84034115, 0.9017255, 1)
+
+[node name="Game" type="Control" unique_id=1918000381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eow3j")
+
+[node name="Panel" type="Panel" parent="." unique_id=2108607695]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
+
+[node name="posA" type="Node2D" parent="." unique_id=677846747]
+position = Vector2(401, 511)
+
+[node name="posB" type="Node2D" parent="." unique_id=490833327]
+position = Vector2(892, 521)
+
+[node name="posC" type="Node2D" parent="." unique_id=1390710661]
+position = Vector2(1410, 519)
+
+[node name="pig1" type="Node2D" parent="." unique_id=1419039920]
+script = ExtResource("2_j5wjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="pig1" unique_id=659826635]
+position = Vector2(442, 558)
+scale = Vector2(0.19050004, 0.17375001)
+texture = ExtResource("3_vef74")
+
+[node name="pig2" type="Node2D" parent="." unique_id=1420230493]
+script = ExtResource("4_hve3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="pig2" unique_id=1501302723]
+position = Vector2(991, 559)
+scale = Vector2(0.19974999, 0.18349998)
+texture = ExtResource("5_mfdv2")
+
+[node name="pig3" type="Node2D" parent="." unique_id=2046965102]
+script = ExtResource("6_iotsf")
+
+[node name="Sprite2D" type="Sprite2D" parent="pig3" unique_id=801780558]
+position = Vector2(1491.1875, 545.00006)
+scale = Vector2(0.19981247, 0.18312502)
+texture = ExtResource("7_lc2xo")
