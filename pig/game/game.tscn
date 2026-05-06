@@ -1,14 +1,49 @@
 [gd_scene format=3 uid="uid://bjdd5lrs4em1e"]
 
 [ext_resource type="Script" uid="uid://byn5kc4jrushg" path="res://game/game.gd" id="1_u5opy"]
-[ext_resource type="Texture2D" uid="uid://cgv83sy7mx2e7" path="res://images/pig1.jpeg" id="3_l8g03"]
+[ext_resource type="Script" uid="uid://buk7ja35utoy8" path="res://game/pig_1.gd" id="2_u5opy"]
+[ext_resource type="Texture2D" uid="uid://c4d53lynsacwc" path="res://images/bg_mm.jpeg" id="2_y36n6"]
+[ext_resource type="Texture2D" uid="uid://doygte6v2hbax" path="res://images/pig1.png" id="3_u5opy"]
 [ext_resource type="Script" uid="uid://3xxujjgcj6xm" path="res://game/pig_2.gd" id="4_j8tme"]
-[ext_resource type="Texture2D" uid="uid://bdbpeg23oukr0" path="res://images/pig2.jpeg" id="5_3vho3"]
+[ext_resource type="Texture2D" uid="uid://c6ncbdwjfwlkm" path="res://images/boar.png" id="5_l8g03"]
+[ext_resource type="Texture2D" uid="uid://cxamcnyf117lq" path="res://images/pig2.png" id="5_y36n6"]
 [ext_resource type="Script" uid="uid://danc7t85kq0hx" path="res://game/pig_3.gd" id="6_qf6n1"]
-[ext_resource type="Texture2D" uid="uid://bhu5dgjs6i314" path="res://images/pig3.jpeg" id="7_vsp63"]
+[ext_resource type="Texture2D" uid="uid://cov4ud5o03pcp" path="res://images/pig3.png" id="7_l8g03"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
-bg_color = Color(0.9999997, 0.91253644, 0.96420556, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8g03"]
+texture = ExtResource("2_y36n6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8tme"]
+bg_color = Color(0.12284931, 0.7215082, 0.20651424, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vho3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qf6n1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsp63"]
+bg_color = Color(0.6048753, 0.4533412, 0.31381994, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b686c"]
+bg_color = Color(0.28047633, 0.15414384, 0.030747632, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb504"]
+bg_color = Color(0.88243574, 0.45346445, 0.44805855, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Game" type="Control" unique_id=2115098873]
 layout_mode = 3
@@ -26,28 +61,96 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_eow3j")
+theme_override_styles/panel = SubResource("StyleBoxTexture_l8g03")
 
 [node name="pig1" type="Node2D" parent="." unique_id=484276072]
-script = ExtResource("6_qf6n1")
+script = ExtResource("2_u5opy")
 
-[node name="Sprite2D" type="Sprite2D" parent="pig1" unique_id=1787277911]
-position = Vector2(361, 582)
-scale = Vector2(0.2265, 0.2155)
-texture = ExtResource("3_l8g03")
+[node name="PigSprite1" type="Sprite2D" parent="pig1" unique_id=1787277911]
+position = Vector2(416, 552)
+scale = Vector2(0.34325004, 0.28975)
+texture = ExtResource("3_u5opy")
+
+[node name="BoarSprite1" type="Sprite2D" parent="pig1" unique_id=1645003306]
+position = Vector2(416, 521)
+scale = Vector2(0.40937504, 0.363)
+texture = ExtResource("5_l8g03")
 
 [node name="pig2" type="Node2D" parent="." unique_id=693924844]
 script = ExtResource("4_j8tme")
 
-[node name="Sprite2D" type="Sprite2D" parent="pig2" unique_id=1811281403]
-position = Vector2(968, 590)
-scale = Vector2(0.20600002, 0.1975)
-texture = ExtResource("5_3vho3")
+[node name="PigSprite2" type="Sprite2D" parent="pig2" unique_id=1811281403]
+position = Vector2(960, 552.9531)
+scale = Vector2(0.35106242, 0.2860938)
+texture = ExtResource("5_y36n6")
+
+[node name="BoarSprite2" type="Sprite2D" parent="pig2" unique_id=836286771]
+position = Vector2(961, 546.99994)
+scale = Vector2(0.42000008, 0.31550002)
+texture = ExtResource("5_l8g03")
 
 [node name="pig3" type="Node2D" parent="." unique_id=1673463507]
 script = ExtResource("6_qf6n1")
 
-[node name="Sprite2D" type="Sprite2D" parent="pig3" unique_id=1059100613]
-position = Vector2(1535, 599)
-scale = Vector2(0.2265, 0.2155)
-texture = ExtResource("7_vsp63")
+[node name="Pigsprite3" type="Sprite2D" parent="pig3" unique_id=1059100613]
+position = Vector2(1488, 552)
+scale = Vector2(0.3466251, 0.28668737)
+texture = ExtResource("7_l8g03")
+
+[node name="BoarSprite3" type="Sprite2D" parent="pig3" unique_id=57941431]
+position = Vector2(1485, 482.99997)
+scale = Vector2(0.4175001, 0.432)
+texture = ExtResource("5_l8g03")
+
+[node name="question" type="Button" parent="." unique_id=1122371699]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 127.0
+offset_right = 1107.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_j8tme")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3vho3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qf6n1")
+text = "question
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1689319104]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 747.0
+offset_right = 1778.0
+offset_bottom = 903.0
+theme_override_constants/separation = 15
+
+[node name="itispig1" type="Button" parent="HBoxContainer" unique_id=58790245]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsp63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b686c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hb504")
+text = "IT'S THIS PIG!"
+
+[node name="itispig2" type="Button" parent="HBoxContainer" unique_id=1492275762]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsp63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b686c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hb504")
+text = "IT'S THIS PIG!"
+
+[node name="itispig3" type="Button" parent="HBoxContainer" unique_id=1735632180]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsp63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b686c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hb504")
+text = "IT'S THIS PIG!"
+
+[connection signal="pressed" from="question" to="." method="_on_question_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig1" to="." method="_on_itispig_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig2" to="." method="_on_itispig_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig3" to="." method="_on_itispig_3_pressed"]

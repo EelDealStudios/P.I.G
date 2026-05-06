@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ncbdwjfwlkm"
-path="res://.godot/imported/boar.png-ed06e9deb5f0016085bd81cdc39b5a45.ctex"
+uid="uid://emnwwst6uy8d"
+path="res://.godot/imported/black.png-643414779a84ba2ab1ac5970d9e9541c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/boar.png"
-dest_files=["res://.godot/imported/boar.png-ed06e9deb5f0016085bd81cdc39b5a45.ctex"]
+source_file="res://images/black.png"
+dest_files=["res://.godot/imported/black.png-643414779a84ba2ab1ac5970d9e9541c.ctex"]
 
 [params]
 
