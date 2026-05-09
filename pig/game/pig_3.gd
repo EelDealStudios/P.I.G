@@ -5,12 +5,14 @@ var rng = RandomNumberGenerator.new()
 
 @onready var pig_sprite = $Pigsprite3
 @onready var boar_sprite = $BoarSprite3
+@onready var pa1 = $"../HBoxContainer2/pa3"
 
 func _ready():
 	rng.randomize()
 
 
 func setup():
+	# debug only (console)
 	print(name + " is " + role)
 
 	# always reset boar visibility at start of round
@@ -34,21 +36,21 @@ func answer(boar_name: String):
 		responses = get_pig_responses(boar_name)
 
 	if responses.is_empty():
-		print(name + " has no responses")
+		pa1.text = name + " has no responses"
 		return
 
 	var choice = responses[rng.randi_range(0, responses.size() - 1)]
-	print(name + " says: " + choice)
+	pa1.text = choice
 
 
 func get_boar_responses(boar_name: String) -> Array:
 	match boar_name:
 		"pig1":
-			return ["it's pig2", "it's pig3", "it's not pig1", "it's either pig2 or pig3"]
+			return ["it's Suspect B", "it's Suspect C", "it's not Suspect A", "it's either Suspect B or Suspect C"]
 		"pig2":
-			return ["it's pig1", "it's pig3", "it's not pig2", "it's either pig1 or pig3"]
+			return ["it's Suspect A", "it's Suspect C", "it's not Suspect B", "it's either Suspect A or Suspect C"]
 		"pig3":
-			return ["it's pig1", "it's pig2", "it's not pig3", "it's either pig1 or pig2"]
+			return ["it's Suspect A", "it's Suspect B", "it's not Suspect C", "it's either Suspect A or Suspect B"]
 
 	return []
 
@@ -56,10 +58,10 @@ func get_boar_responses(boar_name: String) -> Array:
 func get_pig_responses(boar_name: String) -> Array:
 	match boar_name:
 		"pig1":
-			return ["it's pig1", "it's not pig2", "it's not pig3", "it's either pig1 or pig2", "it's either pig1 or pig3"]
+			return ["it's Suspect A", "it's not Suspect B", "it's not Suspect C", "it's either Suspect A or Suspect B", "it's either Suspect A or Suspect C"]
 		"pig2":
-			return ["it's pig2", "it's not pig1", "it's not pig3", "it's either pig1 or pig2", "it's either pig2 or pig3"]
+			return ["it's Suspect B", "it's not Suspect A", "it's not Suspect C", "it's either Suspect A or Suspect B", "it's either Suspect B or Suspect C"]
 		"pig3":
-			return ["it's pig3", "it's not pig1", "it's not pig2", "it's either pig1 or pig3", "it's either pig2 or pig3"]
+			return ["it's Suspect C", "it's not Suspect A", "it's not Suspect B", "it's either Suspect A or Suspect C", "it's either Suspect B or Suspect C"]
 
 	return []

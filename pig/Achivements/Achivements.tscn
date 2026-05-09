@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bw64afiqkpbn0" path="res://Achivements/achivements.gd" id="1_22eau"]
 [ext_resource type="FontFile" uid="uid://bo3i5c51nn4w" path="res://fonts/Symtext.ttf" id="1_qlwj3"]
-[ext_resource type="Texture2D" uid="uid://tl85nrem7r1" path="res://icon.svg" id="3_fwmkw"]
+[ext_resource type="Texture2D" uid="uid://cpo8f80e5wa3h" path="res://images/goodending.jpeg" id="3_dywyp"]
+[ext_resource type="Texture2D" uid="uid://0m4h3rtypwx4" path="res://images/badending.jpeg" id="4_dyrsd"]
+[ext_resource type="Texture2D" uid="uid://cw4d0d3lxxvqa" path="res://images/ending.jpeg" id="5_4fe1o"]
 [ext_resource type="Texture2D" uid="uid://c04qnixmp73cl" path="res://images/4c1a8c4c74dcf910c0028a54b274f627.jpg" id="5_a8mc8"]
+[ext_resource type="AudioStream" uid="uid://bvyya02p02rqh" path="res://music/achievementmusic.mp3" id="6_4alrl"]
 [ext_resource type="Texture2D" uid="uid://emnwwst6uy8d" path="res://images/black.png" id="6_dywyp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22eau"]
@@ -27,6 +30,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_22eau")
 
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1185261135]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 136.0
+offset_right = 1848.0
+offset_bottom = 1047.0
+theme_override_constants/separation = 20
+
+[node name="Panel2" type="Panel" parent="VBoxContainer" unique_id=1784583426]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel4" type="Panel" parent="VBoxContainer" unique_id=1907997553]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel3" type="Panel" parent="VBoxContainer" unique_id=134428404]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel5" type="Panel" parent="VBoxContainer" unique_id=1884226852]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="GoBack" type="Button" parent="." unique_id=1094553126]
 layout_mode = 0
 offset_left = 29.0
@@ -40,26 +67,35 @@ text = "Go back"
 [node name="Achivement1" type="Node2D" parent="." unique_id=781241572]
 position = Vector2(128, 328)
 
-[node name="Sprite2D" type="Sprite2D" parent="Achivement1" unique_id=1410162137]
-position = Vector2(47.500004, -81)
-scale = Vector2(1.7890625, 1.609375)
-texture = ExtResource("3_fwmkw")
+[node name="finished1" type="Sprite2D" parent="Achivement1" unique_id=1410162137]
+position = Vector2(48.06249, -84.14748)
+scale = Vector2(0.118103035, 0.15157603)
+texture = ExtResource("3_dywyp")
 
 [node name="Achivement2" type="Node2D" parent="." unique_id=1552635]
 position = Vector2(128, 512)
 
-[node name="Sprite2D" type="Sprite2D" parent="Achivement2" unique_id=279121485]
-position = Vector2(43, -38.5)
-scale = Vector2(1.671875, 1.6015625)
-texture = ExtResource("3_fwmkw")
+[node name="finsihed2" type="Sprite2D" parent="Achivement2" unique_id=279121485]
+position = Vector2(42.625034, -34.999985)
+scale = Vector2(0.1148682, 0.13297522)
+texture = ExtResource("4_dyrsd")
 
 [node name="Achivement3" type="Node2D" parent="." unique_id=2093078682]
 position = Vector2(128, 704)
 
-[node name="Sprite2D" type="Sprite2D" parent="Achivement3" unique_id=276840771]
-position = Vector2(42.500004, -16.49999)
-scale = Vector2(1.6640625, 1.4609376)
-texture = ExtResource("3_fwmkw")
+[node name="finished3" type="Sprite2D" parent="Achivement3" unique_id=276840771]
+position = Vector2(39.943356, -6)
+scale = Vector2(1.0449398, 1.2485551)
+texture = ExtResource("5_4fe1o")
+
+[node name="A3L" type="Label" parent="Achivement3" unique_id=1431012988]
+offset_left = 199.0
+offset_top = -107.0
+offset_right = 1166.0
+offset_bottom = -14.0
+theme_override_fonts/font = ExtResource("1_qlwj3")
+theme_override_font_sizes/font_size = 50
+text = "Peace was allways an option?"
 
 [node name="Achivement4" type="Node2D" parent="." unique_id=1788795531]
 position = Vector2(128, 896)
@@ -74,40 +110,16 @@ position = Vector2(45, 46.499992)
 scale = Vector2(0.83921564, 1.0487804)
 texture = ExtResource("6_dywyp")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Achivement4" unique_id=1185261135]
-offset_left = 185.0
-offset_top = -760.0
-offset_right = 1720.0
-offset_bottom = 151.0
-theme_override_constants/separation = 20
-
-[node name="Panel2" type="Panel" parent="Achivement4/VBoxContainer" unique_id=1784583426]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel4" type="Panel" parent="Achivement4/VBoxContainer" unique_id=1907997553]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel3" type="Panel" parent="Achivement4/VBoxContainer" unique_id=134428404]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel5" type="Panel" parent="Achivement4/VBoxContainer" unique_id=1884226852]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="A4" type="Label" parent="." unique_id=165178941]
-layout_mode = 0
-offset_left = 325.0
-offset_top = 825.0
-offset_right = 677.0
-offset_bottom = 902.0
+[node name="A4" type="Label" parent="Achivement4" unique_id=165178941]
+offset_left = 197.0
+offset_top = -71.0
+offset_right = 549.0
+offset_bottom = 6.0
 theme_override_fonts/font = ExtResource("1_qlwj3")
 theme_override_font_sizes/font_size = 50
 text = "Boar lover"
 
-[node name="Label" type="Label" parent="A4" unique_id=506468378]
+[node name="Label" type="Label" parent="Achivement4/A4" unique_id=506468378]
 layout_mode = 0
 offset_top = 93.0
 offset_right = 542.0
@@ -115,5 +127,9 @@ offset_bottom = 177.0
 theme_override_fonts/font = ExtResource("1_qlwj3")
 theme_override_font_sizes/font_size = 50
 text = "???"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1502669518]
+stream = ExtResource("6_4alrl")
+autoplay = true
 
 [connection signal="pressed" from="GoBack" to="." method="_on_go_back_pressed"]

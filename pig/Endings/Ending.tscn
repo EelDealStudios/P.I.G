@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cfturousig73p"]
+
+[ext_resource type="Texture2D" uid="uid://cw4d0d3lxxvqa" path="res://images/ending.jpeg" id="1_ruj2a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_182wo"]
+
+[node name="Ending" type="Control" unique_id=606848701]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=877031189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_182wo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=201508837]
+position = Vector2(634.5, 541.125)
+scale = Vector2(5.4409094, 5.9869943)
+texture = ExtResource("1_ruj2a")

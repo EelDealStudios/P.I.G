@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://buebanlfaofpg"]
+
+[ext_resource type="Script" uid="uid://bh5yd24uaqyqa" path="res://GameOver/game_over.gd" id="1_yek8r"]
+[ext_resource type="Texture2D" uid="uid://bp50aqoo5w73a" path="res://images/confusedpig.jpeg" id="2_j0mwb"]
+[ext_resource type="FontFile" uid="uid://bo3i5c51nn4w" path="res://fonts/Symtext.ttf" id="3_8ctgv"]
+[ext_resource type="AudioStream" uid="uid://bvyya02p02rqh" path="res://music/achievementmusic.mp3" id="4_j0mwb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cl02n"]
+
+[node name="GameOver" type="Control" unique_id=1783328060]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yek8r")
+
+[node name="Panel" type="Panel" parent="." unique_id=6741252]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cl02n")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1112241464]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=629550212]
+position = Vector2(584, 546)
+scale = Vector2(0.6021875, 0.5043749)
+texture = ExtResource("2_j0mwb")
+
+[node name="Label" type="Label" parent="." unique_id=915407448]
+layout_mode = 0
+offset_left = 1127.0
+offset_top = 52.0
+offset_right = 1812.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("3_8ctgv")
+theme_override_font_sizes/font_size = 114
+text = "Time's up!"
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=288555351]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 201.0
+offset_right = 1723.0
+offset_bottom = 393.0
+theme_override_colors/font_color = Color(0.8111275, 0.8111274, 0.8111274, 1)
+theme_override_fonts/font = ExtResource("3_8ctgv")
+theme_override_font_sizes/font_size = 38
+text = "Did you fall asleep?
+Doesn't matter,
+you're fired anyways ):"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=903407922]
+layout_mode = 0
+offset_left = 1177.0
+offset_top = 475.0
+offset_right = 1763.0
+offset_bottom = 876.0
+theme_override_constants/separation = 29
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1037216156]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_8ctgv")
+theme_override_font_sizes/font_size = 57
+text = "Back to 
+Main Menu"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1676060822]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_8ctgv")
+theme_override_font_sizes/font_size = 57
+text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=859804760]
+stream = ExtResource("4_j0mwb")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

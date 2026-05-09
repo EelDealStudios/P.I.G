@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dt4jlq272xe3o"]
+
+[ext_resource type="Texture2D" uid="uid://cpo8f80e5wa3h" path="res://images/goodending.jpeg" id="1_qc8ui"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3imk"]
+
+[node name="GoodEnding" type="Control" unique_id=1515946948]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=319014712]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r3imk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476259462]
+position = Vector2(743.25, 539.62494)
+scale = Vector2(0.6843262, 0.7264879)
+texture = ExtResource("1_qc8ui")

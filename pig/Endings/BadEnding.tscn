@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dabuoq38cxqom"]
+
+[ext_resource type="Texture2D" uid="uid://0m4h3rtypwx4" path="res://images/badending.jpeg" id="1_m8rq5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpsg2"]
+
+[node name="BadEnding" type="Control" unique_id=2140959967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=746440692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpsg2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=64176529]
+position = Vector2(704.49994, 549.75)
+scale = Vector2(0.56982416, 0.54589844)
+texture = ExtResource("1_m8rq5")
