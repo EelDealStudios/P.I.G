@@ -1,0 +1,346 @@
+[gd_scene format=3 uid="uid://bjdd5lrs4em1e"]
+
+[ext_resource type="Script" uid="uid://byn5kc4jrushg" path="res://game/game.gd" id="1_u5opy"]
+[ext_resource type="Script" uid="uid://buk7ja35utoy8" path="res://game/pig_1.gd" id="2_u5opy"]
+[ext_resource type="Texture2D" uid="uid://c4d53lynsacwc" path="res://images/bg_mm.jpeg" id="2_y36n6"]
+[ext_resource type="Texture2D" uid="uid://doygte6v2hbax" path="res://images/pig1.png" id="3_u5opy"]
+[ext_resource type="Script" uid="uid://3xxujjgcj6xm" path="res://game/pig_2.gd" id="4_j8tme"]
+[ext_resource type="Texture2D" uid="uid://c6ncbdwjfwlkm" path="res://images/boar.png" id="5_l8g03"]
+[ext_resource type="Texture2D" uid="uid://cxamcnyf117lq" path="res://images/pig2.png" id="5_y36n6"]
+[ext_resource type="Script" uid="uid://danc7t85kq0hx" path="res://game/pig_3.gd" id="6_qf6n1"]
+[ext_resource type="Texture2D" uid="uid://cov4ud5o03pcp" path="res://images/pig3.png" id="7_l8g03"]
+[ext_resource type="AudioStream" uid="uid://dc3dvuitu13k8" path="res://music/gamemusic.mp3" id="10_j8tme"]
+[ext_resource type="FontFile" uid="uid://bo3i5c51nn4w" path="res://fonts/Symtext.ttf" id="10_qf6n1"]
+[ext_resource type="Script" uid="uid://j0xvpg5vogk5" path="res://game/game_music.gd" id="12_b686c"]
+[ext_resource type="Script" uid="uid://jr7y2mleafv3" path="res://game/timer.gd" id="12_vsp63"]
+[ext_resource type="AudioStream" uid="uid://kg1ksk0pvaby" path="res://music/apebble-fart-4-228244.mp3" id="14_b686c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8g03"]
+texture = ExtResource("2_y36n6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8tme"]
+bg_color = Color(0.6045727, 0.86811286, 0.6460282, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.28862652, 0.5457937, 0.2944198, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vho3"]
+bg_color = Color(0.2598027, 0.45801473, 0.29626688, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qf6n1"]
+bg_color = Color(0.51156586, 0.79035336, 0.5585249, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxxsx"]
+bg_color = Color(0.6039216, 0.45490196, 0.3137255, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.29411766, 0.8, 0.99607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b686c"]
+bg_color = Color(0.28047633, 0.15414384, 0.030747632, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb504"]
+bg_color = Color(0.88243574, 0.45346445, 0.44805855, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8s88"]
+bg_color = Color(0.6039216, 0.45490196, 0.3137255, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.7058824, 0.78431374, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsp63"]
+bg_color = Color(0.6048753, 0.4533412, 0.31381994, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.99607843, 0.7607843, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee6o4"]
+bg_color = Color(0.60165054, 0.38427067, 0.2375072, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxwpq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2955025, 0.79988587, 0.99755603, 1)
+border_blend = true
+shadow_color = Color(0.14723223, 0.81455696, 0.99999994, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln7ps"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.70512456, 0.78487897, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhvfb"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9971264, 0.7607977, 1.92523e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cobl"]
+bg_color = Color(0.6, 0.38431373, 0.23921569, 1)
+
+[node name="Game" type="Control" unique_id=2115098873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u5opy")
+
+[node name="Panel" type="Panel" parent="." unique_id=321806025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_l8g03")
+
+[node name="pig1" type="Node2D" parent="." unique_id=484276072]
+position = Vector2(0, 123)
+script = ExtResource("2_u5opy")
+
+[node name="PigSprite1" type="Sprite2D" parent="pig1" unique_id=1787277911]
+position = Vector2(416, 552)
+scale = Vector2(0.34325004, 0.28975)
+texture = ExtResource("3_u5opy")
+
+[node name="BoarSprite1" type="Sprite2D" parent="pig1" unique_id=1645003306]
+position = Vector2(416.12497, 542.75)
+scale = Vector2(0.40968752, 0.3195)
+texture = ExtResource("5_l8g03")
+
+[node name="pig2" type="Node2D" parent="." unique_id=693924844]
+position = Vector2(0, 123)
+script = ExtResource("4_j8tme")
+
+[node name="PigSprite2" type="Sprite2D" parent="pig2" unique_id=1811281403]
+position = Vector2(960, 552.9531)
+scale = Vector2(0.35106242, 0.2860938)
+texture = ExtResource("5_y36n6")
+
+[node name="BoarSprite2" type="Sprite2D" parent="pig2" unique_id=836286771]
+position = Vector2(961, 546.99994)
+scale = Vector2(0.42000008, 0.31550002)
+texture = ExtResource("5_l8g03")
+
+[node name="pig3" type="Node2D" parent="." unique_id=1673463507]
+position = Vector2(0, 123)
+script = ExtResource("6_qf6n1")
+
+[node name="Pigsprite3" type="Sprite2D" parent="pig3" unique_id=1059100613]
+position = Vector2(1488, 552)
+scale = Vector2(0.3466251, 0.28668737)
+texture = ExtResource("7_l8g03")
+
+[node name="BoarSprite3" type="Sprite2D" parent="pig3" unique_id=57941431]
+position = Vector2(1483, 555)
+scale = Vector2(0.44249997, 0.324)
+texture = ExtResource("5_l8g03")
+
+[node name="question" type="Button" parent="." unique_id=1122371699]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 88.0
+offset_right = 567.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 82
+theme_override_styles/normal = SubResource("StyleBoxFlat_j8tme")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3vho3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qf6n1")
+text = "question
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1689319104]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 849.0
+offset_right = 1778.0
+offset_bottom = 1026.0
+theme_override_constants/separation = 31
+
+[node name="itispig1" type="Button" parent="HBoxContainer" unique_id=58790245]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_pxxsx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b686c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hb504")
+text = "IT'S THIS PIG!"
+
+[node name="itispig2" type="Button" parent="HBoxContainer" unique_id=1492275762]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_u8s88")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b686c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hb504")
+text = "IT'S THIS PIG!"
+
+[node name="itispig3" type="Button" parent="HBoxContainer" unique_id=1735632180]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsp63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b686c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hb504")
+text = "IT'S THIS PIG!"
+
+[node name="GameMusic" type="AudioStreamPlayer2D" parent="." unique_id=494210845]
+stream = ExtResource("10_j8tme")
+autoplay = true
+script = ExtResource("12_b686c")
+
+[node name="Timer" type="Panel" parent="." unique_id=810960193]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 43.0
+offset_right = 1247.0
+offset_bottom = 198.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ee6o4")
+script = ExtResource("12_vsp63")
+
+[node name="Seconds" type="Label" parent="Timer" unique_id=256864128]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 15.0
+offset_right = 540.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 80
+text = "00"
+horizontal_alignment = 1
+
+[node name="fart" type="AudioStreamPlayer2D" parent="." unique_id=1070677677]
+stream = ExtResource("14_b686c")
+volume_db = 24.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=716388990]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 308.0
+offset_right = 1774.0
+offset_bottom = 483.0
+theme_override_constants/separation = 41
+
+[node name="pa1l" type="Panel" parent="HBoxContainer2" unique_id=2138302043]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxwpq")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/pa1l" unique_id=1517677332]
+layout_mode = 0
+offset_right = 534.0
+offset_bottom = 155.0
+
+[node name="pa1" type="Label" parent="HBoxContainer2/pa1l/MarginContainer" unique_id=2070749673]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.11059343, 0.044012517, 0.07758289, 1)
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="pa2l" type="Panel" parent="HBoxContainer2" unique_id=2058963121]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ln7ps")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/pa2l" unique_id=240275035]
+layout_mode = 0
+offset_right = 534.0
+offset_bottom = 155.0
+
+[node name="pa2" type="Label" parent="HBoxContainer2/pa2l/MarginContainer" unique_id=1928623672]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.11059343, 0.044012517, 0.07758289, 1)
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="pa3l" type="Panel" parent="HBoxContainer2" unique_id=1563099195]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mhvfb")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/pa3l" unique_id=868940045]
+layout_mode = 0
+offset_right = 534.0
+offset_bottom = 155.0
+
+[node name="pa3" type="Label" parent="HBoxContainer2/pa3l/MarginContainer" unique_id=1401317834]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.11059343, 0.044012517, 0.07758289, 1)
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=166908123]
+layout_mode = 0
+offset_left = 1359.0
+offset_top = 66.0
+offset_right = 1779.0
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4cobl")
+
+[node name="RI" type="Label" parent="Panel2" unique_id=1461485134]
+layout_mode = 0
+offset_right = 409.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("10_qf6n1")
+theme_override_font_sizes/font_size = 64
+text = "Round 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="question" to="." method="_on_question_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig1" to="." method="_on_itispig_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig1" to="GameMusic" method="_on_itispig_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig2" to="." method="_on_itispig_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig2" to="GameMusic" method="_on_itispig_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig3" to="." method="_on_itispig_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/itispig3" to="GameMusic" method="_on_itispig_3_pressed"]
